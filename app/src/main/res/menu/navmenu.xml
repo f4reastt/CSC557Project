@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/navhome"
+        android:icon="@drawable/ic_home"
+        android:title="home"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/navregcourse"
+        android:title="REGISTER NEW COURSE"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/navresult"
+        android:title="RESULT"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/navlogout"
+        android:title="LOG OUT"
+        app:showAsAction="never"/>
+</menu>
