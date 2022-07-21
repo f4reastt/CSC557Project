@@ -10,5 +10,8 @@ public class Registered_CourseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registered_course);
+
+
+
     }
 }
