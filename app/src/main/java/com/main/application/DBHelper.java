@@ -88,4 +88,18 @@ public class DBHelper extends SQLiteOpenHelper {
             return true;
     }
 
+    public boolean chklogin(String email, String password){
+        SQLiteDatabase db;
+        Cursor cursor;
+
+        db = this.getReadableDatabase();
+        cursor = db.rawQuery("select * from user where email=? and password=?", new String[]{email, password});
+        if(cursor.getCount()==1)
+            return true;
+        else
+            return false;
+    }
+
+    //jhbsvcisgbviusabhvi
+
 }
