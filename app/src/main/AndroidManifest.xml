@@ -10,11 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.557GroupProject">
         <activity
+<<<<<<< Updated upstream
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".RegisteredCourse"
             android:exported="false" />
+=======
+            android:name=".test"
+            android:exported="false"
+            android:label="@string/title_activity_test"
+            android:theme="@style/Theme.557GroupProject.NoActionBar" />
+>>>>>>> Stashed changes
         <activity
             android:name=".MainActivity"
             android:exported="true">
