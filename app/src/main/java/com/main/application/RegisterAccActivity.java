@@ -32,7 +32,7 @@ public class RegisterAccActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String studentId, nama, emel, pwd1, pwd2;
-                boolean chk, ins;
+                boolean chk, ins1;
                 Intent i;
 
                 studentId = id.getText().toString();
@@ -47,8 +47,8 @@ public class RegisterAccActivity extends AppCompatActivity {
                     if (pwd1.equals(pwd2)) {
                         chk = db.chkemail(emel);
                         if (chk) {
-                            ins = db.insert(studentId, emel, pwd1, nama);
-                            if (ins) {
+                            ins1 = db.insert(studentId, emel, pwd1, nama);
+                            if (ins1) {
                                 Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
                                 i = new Intent(RegisterAccActivity.this, LoginActivity.class);
                                 startActivity(i);

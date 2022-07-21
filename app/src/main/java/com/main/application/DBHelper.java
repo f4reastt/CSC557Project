@@ -1,3 +1,4 @@
+//sync ikut DB
 package com.main.application;
 
 import android.content.ContentValues;
@@ -17,7 +18,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Select * from user");
-
+        db.execSQL("Select * from register_course");
     }
 
     @Override
@@ -26,22 +27,50 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public boolean insert(String studId, String name, String email, String password){
-        long ins;
+        long ins1;
         SQLiteDatabase db;
-        ContentValues values;
+
+        //insert user
+        ContentValues uservalues;
 
         db = this.getWritableDatabase();
-        values = new ContentValues();
+        uservalues = new ContentValues();
 
-        values.put("Student_ID", studId);
-        values.put("name", name);
-        values.put("email", email);
-        values.put("password", password);
+        uservalues.put("Student_ID", studId);
+        uservalues.put("name", name);
+        uservalues.put("email", email);
+        uservalues.put("password", password);
 
 
-        ins = db.insert("user",null, values);
+        ins1 = db.insert("user",null, uservalues);
 
-        if(ins==-1)
+        if(ins1==-1)
+            return false;
+        else
+            return true;
+
+    }
+
+    public boolean insert2(String studId, int semester, String course, double grade ){
+
+        long ins2;
+        SQLiteDatabase db;
+
+        //insert course
+        ContentValues registervalues;
+
+        db = this.getWritableDatabase();
+        registervalues = new ContentValues();
+
+        registervalues.put("Student_ID", studId);
+        registervalues.put("semester num", semester);
+        registervalues.put("course_code", course);
+        registervalues.put("password", grade);
+
+
+        ins2 = db.insert("register_course",null, registervalues);
+
+        if(ins2==-1)
             return false;
         else
             return true;
