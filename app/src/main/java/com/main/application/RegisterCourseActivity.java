@@ -37,8 +37,6 @@ public class RegisterCourseActivity extends AppCompatActivity {
                 double gd;
                 boolean ins2;
 
-                Intent i;
-
                 studentId = id.getText().toString();
                 sem = Integer.parseInt(semester.getText().toString());
                 sub = subject.getText().toString();
