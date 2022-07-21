@@ -29,6 +29,7 @@ public class RegisterCourseActivity extends AppCompatActivity {
         db = new DBHelper(this);
 
         button1.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 String studentId, sub;
