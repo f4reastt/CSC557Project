@@ -18,7 +18,16 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table user (Student_ID integer primary key, Fullname text , Email text , Password text)");
+        //db.execSQL("CREATE TABLE user (Student_ID integer primary key, Fullname text , Email text , Password text)");
+        //db.execSQL("CREATE TABLE [registered course] (numRegister INTEGER primary key, course_code INTEGER NOT NULL," +
+                //"student_id INTEGER NOT NULL, grade_id INTEGER NOT NULL, [semester num] INTEGER NOT NULL," +
+                //"cgpa REAL NOT NULL, gpa REAL NOT NULL," +
+                //"FOREIGN KEY(course_code) REFERENCES [course] (Course_code)," +
+                //"FOREIGN KEY(grade_id) REFERENCES [grade] (grade_id)," +
+                //"FOREIGN KEY(student_id) REFERENCES [user] (Student_ID))");
+        //db.execSQL("CREATE TABLE course (Course_code TEXT primary key NOT NULL UNIQUE, Course_name TEXT NOT NULL, " +
+                        //"Course_credit INTEGER NOT NULL, Semester_course INTEGER NOT NULL)");
+        //db.execSQL("CREATE TABLE grade (grade_id integer primary key NOT NULL, grade text NOT NULL, grade_point REAL NOT NULL)");
     }
 
     @Override
@@ -66,6 +75,31 @@ public class DBHelper extends SQLiteOpenHelper {
         x.put("semester num", semester);
         x.put("course_code", course);
         x.put("password", grade);
+
+
+        ins2 = db.insert("register_course",null, x);
+
+        if(ins2==-1)
+            return false;
+        else
+            return true;
+    }
+
+    public boolean insert3(String courseId, String corName, int cred, int crHour ){
+
+        long ins2;
+        SQLiteDatabase db;
+
+        //insert course
+        ContentValues x;
+
+        db = this.getWritableDatabase();
+        x = new ContentValues();
+
+        x.put("Student_ID", courseId);
+        x.put("semester num", corName);
+        x.put("course_code", cred);
+        x.put("password", crHour);
 
 
         ins2 = db.insert("register_course",null, x);

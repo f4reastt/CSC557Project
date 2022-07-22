@@ -44,9 +44,8 @@ public class RegisterCourseActivity extends AppCompatActivity {
                 gd = Double.parseDouble(grade.getText().toString());
 
 
-                if (sub.equals(""))
-                    if(sem == 0 && gd == 0 && studentId == 0)
-                        Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
+                if (sub.equals("") && sem == 0 && gd == 0 && studentId == 0)
+                    Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
                 else {
                     ins2 = db.insert2(studentId, sem, sub, gd);
                     if (ins2) {
