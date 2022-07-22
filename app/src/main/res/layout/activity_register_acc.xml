@@ -12,45 +12,55 @@
         android:id="@+id/etId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Student ID"
+        android:hint="  Student ID"
         android:inputType="textPersonName"
         android:layout_margin="10dp"
+
+        android:drawableLeft="@drawable/ic_baseline_card_membership_24"
         android:singleLine="true" />
 
     <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
+        android:hint="  Name"
         android:inputType="textPersonName"
         android:layout_margin="10dp"
+
+        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
         android:singleLine="true" />
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
+        android:hint="  Email"
         android:inputType="textEmailAddress"
         android:layout_margin="10dp"
+
+        android:drawableLeft="@drawable/ic_baseline_email_24"
         android:singleLine="true" />
 
     <EditText
         android:id="@+id/etPass1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:hint="  Password"
         android:inputType="textPassword"
         android:layout_margin="10dp"
+
+        android:drawableLeft="@drawable/ic_baseline_no_encryption_24"
         android:singleLine="true" />
 
     <EditText
         android:id="@+id/etPass2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Confirm Password"
+        android:hint="  Confirm Password"
         android:inputType="textPassword"
         android:layout_margin="10dp"
+
+        android:drawableLeft="@drawable/ic_baseline_enhanced_encryption_24"
         android:singleLine="true" />
 
     <Button
