@@ -8,6 +8,21 @@
     android:padding="16dp"
     tools:context=".RegisterCourseActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="131dp"
+        android:src="@drawable/ic_studying_student_svgrepo_com" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="Register Course"
+        android:gravity="center"
+        android:layout_marginTop="dp"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
     <EditText
         android:id="@+id/etId"
         android:layout_width="match_parent"
@@ -48,7 +63,7 @@
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginTop="30dp"
         android:text="Register"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -56,7 +71,7 @@
         android:id="@+id/btnUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="0dp"
         android:text="Update"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 </LinearLayout>
