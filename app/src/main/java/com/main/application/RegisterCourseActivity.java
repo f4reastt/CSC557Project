@@ -29,14 +29,13 @@ public class RegisterCourseActivity extends AppCompatActivity {
         db = new DBHelper(this);
 
         button1.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 String studentId, sub;
                 int sem;
                 double gd;
                 boolean ins2;
-
-                Intent i;
 
                 studentId = id.getText().toString();
                 sem = Integer.parseInt(semester.getText().toString());
