@@ -12,14 +12,13 @@ import androidx.annotation.Nullable;
 public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(@Nullable Context context) {
-        super(context, "Project.db", null, 1);
+        super(context, "ProjectDB.db", null, 1);
     }
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table users(username TEXT primary key, password TEXT, name TEXT)");
-        db.execSQL("Select * from user");
-        db.execSQL("Select * from register_course");
+        db.execSQL("create table user (Student_ID integer primary key, Fullname text , Email text , Password text)");
     }
 
     @Override
@@ -27,23 +26,23 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("drop table if exists user");
     }
 
-    public boolean insert(String studId, String name, String email, String password){
+    public boolean insert(int studId, String name, String email, String password){
         long ins1;
         SQLiteDatabase db;
 
         //insert user
-        ContentValues uservalues;
+        ContentValues value;
 
         db = this.getWritableDatabase();
-        uservalues = new ContentValues();
+        value = new ContentValues();
 
-        uservalues.put("Student_ID", studId);
-        uservalues.put("name", name);
-        uservalues.put("email", email);
-        uservalues.put("password", password);
+        value.put("Student_ID", studId);
+        value.put("Fullname", name);
+        value.put("Email", email);
+        value.put("Password", password);
 
 
-        ins1 = db.insert("user",null, uservalues);
+        ins1 = db.insert("user",null, value);
 
         if(ins1==-1)
             return false;
@@ -52,24 +51,24 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean insert2(String studId, int semester, String course, double grade ){
+    public boolean insert2(int studId, int semester, String course, double grade ){
 
         long ins2;
         SQLiteDatabase db;
 
         //insert course
-        ContentValues registervalues;
+        ContentValues x;
 
         db = this.getWritableDatabase();
-        registervalues = new ContentValues();
+        x = new ContentValues();
 
-        registervalues.put("Student_ID", studId);
-        registervalues.put("semester num", semester);
-        registervalues.put("course_code", course);
-        registervalues.put("password", grade);
+        x.put("Student_ID", studId);
+        x.put("semester num", semester);
+        x.put("course_code", course);
+        x.put("password", grade);
 
 
-        ins2 = db.insert("register_course",null, registervalues);
+        ins2 = db.insert("register_course",null, x);
 
         if(ins2==-1)
             return false;

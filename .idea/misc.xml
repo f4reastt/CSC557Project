@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Najmi Faiz/Documents/GitHub/CSC557Project/app/src/main/res/layout/activity_nav_bar.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Najmi Faiz/Documents/GitHub/CSC557Project/app/src/main/res/menu/navmenu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/mwana/Desktop/CSC557Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.164" />
+        <entry key="..\:/Users/mwana/Desktop/CSC557Project/app/src/main/res/drawable/ic_home.xml" value="0.17" />
+        <entry key="..\:/Users/mwana/Desktop/CSC557Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.17" />
+        <entry key="..\:/Users/mwana/Desktop/CSC557Project/app/src/main/res/layout/activity_dashboard.xml" value="0.19021739130434784" />
         <entry key="..\:/Users/mwana/Desktop/CSC557Project/app/src/main/res/layout/activity_login.xml" value="0.17617753623188406" />
+        <entry key="..\:/Users/mwana/Desktop/CSC557Project/app/src/main/res/layout/activity_main.xml" value="0.19021739130434784" />
         <entry key="..\:/Users/mwana/Desktop/CSC557Project/app/src/main/res/layout/activity_register_acc.xml" value="0.17617753623188406" />
         <entry key="..\:/Users/mwana/Desktop/CSC557Project/app/src/main/res/layout/activity_register_course.xml" value="0.2" />
         <entry key="..\:/Users/mwana/Desktop/CSC557Project/app/src/main/res/layout/activity_registered_course.xml" value="0.17617753623188406" />
+        <entry key="..\:/Users/mwana/Desktop/CSC557Project/app/src/main/res/menu/navmenu.xml" value="0.25" />
       </map>
     </option>
   </component>

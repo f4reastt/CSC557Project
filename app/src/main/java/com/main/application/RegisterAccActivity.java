@@ -31,11 +31,12 @@ public class RegisterAccActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String studentId, nama, emel, pwd1, pwd2;
+                String nama, emel, pwd1, pwd2;
+                int studentId;
                 boolean chk, ins1;
                 Intent i;
 
-                studentId = id.getText().toString();
+                studentId = Integer.parseInt(id.getText().toString());;
                 nama = name.getText().toString();
                 emel = email.getText().toString();
                 pwd1 = pass1.getText().toString();
@@ -47,7 +48,7 @@ public class RegisterAccActivity extends AppCompatActivity {
                     if (pwd1.equals(pwd2)) {
                         chk = db.chkemail(emel);
                         if (chk) {
-                            ins1 = db.insert(studentId, emel, pwd1, nama);
+                            ins1 = db.insert(studentId, nama, emel, pwd1 );
                             if (ins1) {
                                 Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
                                 i = new Intent(RegisterAccActivity.this, LoginActivity.class);
