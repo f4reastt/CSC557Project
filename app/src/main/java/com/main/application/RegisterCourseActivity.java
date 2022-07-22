@@ -32,19 +32,20 @@ public class RegisterCourseActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                String studentId, sub;
+                String sub;
+                int studentId;
                 int sem;
                 double gd;
                 boolean ins2;
 
-                studentId = id.getText().toString();
+                studentId = Integer.parseInt(id.getText().toString());
                 sem = Integer.parseInt(semester.getText().toString());
                 sub = subject.getText().toString();
                 gd = Double.parseDouble(grade.getText().toString());
 
 
-                if (studentId.equals("") || sub.equals(""))
-                    if(sem == 0 && gd == 0)
+                if (sub.equals(""))
+                    if(sem == 0 && gd == 0 && studentId == 0)
                         Toast.makeText(getApplicationContext(), "Fields are empty", Toast.LENGTH_SHORT).show();
                 else {
                     ins2 = db.insert2(studentId, sem, sub, gd);
